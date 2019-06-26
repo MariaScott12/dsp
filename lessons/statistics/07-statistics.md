@@ -77,9 +77,10 @@ This questions asks you to examine the function that produces random numbers.  I
 
 ### Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (normal distribution of blue men)
 This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic. 
-
-
-
+CHapter 5 Ex 1 asks : How many people are between 5' 10" and 6'1"?
+Solution goes here:
+dist.cdf(185.42)-dist.cdf(177.8)
+the reslt is: 0.3427468376314737
 ### Q5. Bayesian (Elvis Presley twin) 
 
 Bayes' Theorem is an important tool in understanding what we really know, given evidence of other information we have, in a quantitative way.  It helps incorporate conditional probabilities into our conclusions.
