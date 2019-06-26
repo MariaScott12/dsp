@@ -72,6 +72,51 @@ You will see effect size again and again in results of algorithms that are run i
 ### Q2. [Think Stats Chapter 3 Exercise 1](statistics/3-1-actual_biased.md) (actual vs. biased)
 This problem presents a robust example of actual vs biased data.  As a data scientist, it will be important to examine not only the data that is available, but also the data that may be missing but highly relevant.  You will see how the absence of this relevant data will bias a dataset, its distribution, and ultimately, its statistical interpretation.
 
+#Explore the dif in weights between 1st & others from live data
+#Are first babies lighter or heavier than others?
+#create variable for weights of first babies
+#create variable for weights of second babies
+#what is mean for firsts? others?
+#limit to within 1 lower std dev
+
+first_weight = firsts[(firsts['prglngth'] > 36.0) & (firsts['totalwgt_lb'] > 5.0)]
+first_weight = first_weight[['birthord', 'totalwgt_lb', 'prglngth']]
+#print(first_weight)
+#other_weight = others[['birthord', 'totalwgt_lb', 'prglngth']]
+#tiny_baby = firsts[firsts['totalwgt_lb'] == 0.125]
+#for col in firsts.columns:
+#    print( tiny_baby[col] )
+other_weight = others[(others['prglngth'] > 36.0) & (others['totalwgt_lb'] > 5.0)]
+other_weight = other_weight[['birthord', 'totalwgt_lb', 'prglngth']]
+#print(other_weight)
+
+firsts_mean_weight = first_weight.totalwgt_lb.mean()
+others_mean_weight = other_weight.totalwgt_lb.mean()
+print(firsts_mean)
+print(others_mean)
+The result of this was:
+
+7.476537325456499
+7.581671590349582
+
+#The difference in mean weights between firsts and others
+#comes out to 1/10 of a pound
+firsts_mean_weight - others_mean_weight
+The result was:
+-0.10513426489308308
+
+# Solution goes here
+#The difference comes to .09 of a standard deviation
+#The Ex asks for comparison between difference between Cohen effect 
+# of lenghts v. weights for first born and others.
+#The difference variability in weights between first born, -.095
+#is even smaller than that of lengths at .029
+CohenEffectSize(first_weight.totalwgt_lb, other_weight.totalwgt_lb)
+The result was:
+
+-0.09499309265451224
+
+
 ### Q3. [Think Stats Chapter 4 Exercise 2](statistics/4-2-random_dist.md) (random distribution)  
 This questions asks you to examine the function that produces random numbers.  Is it really random?  A good way to test that is to examine the pmf and cdf of the list of random numbers and visualize the distribution.  If you're not sure what pmf is, read more about it in Chapter 3.  
 
