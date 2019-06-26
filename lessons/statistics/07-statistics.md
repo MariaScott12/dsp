@@ -120,9 +120,6 @@ The result was:
 ### Q3. [Think Stats Chapter 4 Exercise 2](statistics/4-2-random_dist.md) (random distribution)  
 This questions asks you to examine the function that produces random numbers.  Is it really random?  A good way to test that is to examine the pmf and cdf of the list of random numbers and visualize the distribution.  If you're not sure what pmf is, read more about it in Chapter 3.  
 
-### Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (normal distribution of blue men)
-This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic.
-
 At first to get a handle on the exercise I gnerated random numbers only 1, 100, then incremented up to the 1K as instructed.  As the sample number increased the plot became smoother and the final scatter plot shows nearly straight line.  
 
 # Solution goes here
@@ -163,7 +160,8 @@ y #show y scale
 
 plt.scatter( x= sorted_data[0], y= y) #used scatter plot instead of thinkplots Cdf function'
 
-
+### Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (normal distribution of blue men)
+This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic.
 
 CHapter 5 Ex 1 asks : How many people are between 5' 10" and 6'1"?
 Solution goes here:
