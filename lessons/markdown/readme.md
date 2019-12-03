@@ -95,6 +95,7 @@ Rendered emoji's:
 :fireworks:  
 :smiley:  
 :watermelon:  
+:blowfish:
  
 ---
 
